@@ -8,6 +8,8 @@ WORKDIR /opt/certbot
 COPY CHANGES.rst README.rst setup.py src/
 COPY acme src/acme
 COPY certbot src/certbot
+COPY certbot-dns-cloudflare src/certbot-dns-cloudflare
+COPY certbot-nginx src/certbot-nginx
 
 RUN apk add --no-cache --virtual .certbot-deps \
         libffi \
